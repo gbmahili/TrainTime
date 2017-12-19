@@ -1,0 +1,11 @@
+.jumbotron {
+    padding: 1rem 2rem;
+}
+
+.add-train-section{
+    margin-top: 10px;
+}
+
+.btn-info{
+    cursor: pointer;
+}

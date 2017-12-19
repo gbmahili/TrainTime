@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GBMahili Train Time</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>GBMahili Train Time</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- <div class="jumbotron"> -->
+                <h1 class="display-4">New York Train Time</h1>
+                <p class="lead">Add a train to determine when the next one will arrive, how many minutes remaining...</p>
+                <hr class="my-4">
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-inverse card-info mb-3">
+                        Current Train Schedule
+                    </div>
+                    <div class="card-block">
+
+                        <table class="table">
+
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="train-schedule">
+                                <!-- <tr>
+                                    <td scope="row">Trenton Express</td>
+                                    <td>Trenton</td>
+                                    <td>25</td>
+                                    <td>05:35 PM</td>
+                                    <td>10</td>
+                                </tr>
+
+                                <tr>
+                                    <td scope="row">Trenton Express</td>
+                                    <td>Trenton</td>
+                                    <td>25</td>
+                                    <td>05:35 PM</td>
+                                    <td>10</td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row add-train-section">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-inverse card-success mb-3">
+                        Add Train
+                    </div>
+                    <div class="card-block">
+
+                        <form>
+
+                            <div class="form-group">
+                                <label for="train-name">Train Name</label>
+                                <input type="text" class="form-control" id="train-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Destrination</label>
+                                <input type="text" class="form-control" id="destination" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="first-train-time">First Train Time (HH:mm - military time)</label>
+                                <input type="time" class="form-control" id="first-train-time" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="frequency">Frequency</label>
+                                <input type="text" class="form-control" id="frequency" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-info" id="add-train">Add Train</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    <!-- Momement library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.4/moment.min.js"></script>
+    <!-- GBMahili Logic -->
+    <script src="./assets/javascript/app.js"></script>
+</body>
+
+</html>
