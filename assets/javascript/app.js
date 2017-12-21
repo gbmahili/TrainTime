@@ -37,6 +37,7 @@ $("document").ready(function () {
 
     //Retrieve Data From the Database
     setInterval(() => {
+    
     $("#train-schedule").empty();
     database.ref().on("child_added", function (childSnapshot) {
         //Create a varriable that stores the data from the
@@ -58,9 +59,7 @@ $("document").ready(function () {
                 //Get the difference between today using moment() and the date the employee started working
                 "<td>" + nextArrival + "</td>" +
                 "<td>" + mininutesAway + "</td></tr>"
-            );
-
-        
+            );        
     },
         function (error) {
             console.log("There is an error" + error.code());
