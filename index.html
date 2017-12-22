@@ -34,7 +34,7 @@
         <div class="row">
             <div class="col-md-12">
                 <!-- <div class="jumbotron"> -->
-                <h1 class="display-4">New York Train Time</h1>
+                <h1 class="display-4">GBMahili Train Time</h1>
                 <p class="lead">Add a train to determine when the next one will arrive, how many minutes remaining...</p>
                 <hr class="my-4">
                 <!-- </div> -->
@@ -51,7 +51,7 @@
                     <div class="card-block">
 
                         <table class="table">
-
+                            <!-- Table header: hard coded -->
                             <thead>
                                 <tr>
                                     <th scope="col">Train Name</th>
@@ -62,22 +62,9 @@
 
                                 </tr>
                             </thead>
+                            <!-- Table body: populated dynamically -->
                             <tbody id="train-schedule">
-                                <!-- <tr>
-                                    <td scope="row">Trenton Express</td>
-                                    <td>Trenton</td>
-                                    <td>25</td>
-                                    <td>05:35 PM</td>
-                                    <td>10</td>
-                                </tr>
-
-                                <tr>
-                                    <td scope="row">Trenton Express</td>
-                                    <td>Trenton</td>
-                                    <td>25</td>
-                                    <td>05:35 PM</td>
-                                    <td>10</td>
-                                </tr> -->
+                                <!-- Train Schedule will be populated here from Firebase -->
                             </tbody>
                         </table>
 
