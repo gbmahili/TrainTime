@@ -35,33 +35,42 @@ $("document").ready(function () {
         database.ref().push(train);
     });
 
-    //Retrieve Data From the Database
+    //Retrieve Data From the Database: This should be done every one second...
     setInterval(() => {
-    
+    //First, we empty the train schedule table
     $("#train-schedule").empty();
+    //Then we get the data from firebase
     database.ref().on("child_added", function (childSnapshot) {
         //Create a varriable that stores the data from the
         var trainsData = childSnapshot.val();       
         //First, let's convert the time given by the user.
         var convertedFirstTrainTime = moment(trainsData.firstTrainTime, "HH:mm").subtract(1, "years");
-        //We then get the difference between the curent time
+        //We then get the difference between the curent time and the time when the train will arrive
         var diffBetweenNowAndFirstTrainTime = moment().diff(moment(convertedFirstTrainTime), "minutes");
+        //Calculate the time remaining
         var timeRemaining = diffBetweenNowAndFirstTrainTime % trainsData.frequency;
+        //get minutes away here
         var mininutesAway = trainsData.frequency - timeRemaining;
+        //Calculate nextArrival here
         nextArrival = moment().add(mininutesAway, "minutes");
         nextArrival = moment(nextArrival).format("HH:mm");
             
             //Create a table dynamically
             $("#train-schedule").append(
+                //Print Train Name here
                 "<tr> <td>" + trainsData.trainName + "</td>" +
+                //Print destination name here
                 "<td>" + trainsData.destination + "</td>" +
+                //Print train frequency here
                 "<td>" + trainsData.frequency + "</td>" +
-                //Get the difference between today using moment() and the date the employee started working
+                //Print next arrival time here
                 "<td>" + nextArrival + "</td>" +
+                //Print minutes away here
                 "<td>" + mininutesAway + "</td></tr>"
             );        
     },
         function (error) {
+            //Log the erro if it is present
             console.log("There is an error" + error.code());
         }
     );
