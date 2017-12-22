@@ -62,11 +62,11 @@ $("document").ready(function () {
                 //Print destination name here
                 "<td>" + trainsData.destination + "</td>" +
                 //Print train frequency here
-                "<td>" + trainsData.frequency + "</td>" +
+                "<td class='text-center'>" + trainsData.frequency + "</td>" +
                 //Print next arrival time here
-                "<td>" + nextArrival + "</td>" +
+                "<td class='text-center'>" + nextArrival + "</td>" +
                 //Print minutes away here
-                "<td>" + mininutesAway + "</td></tr>"
+                "<td class='text-center'>" + mininutesAway + "</td></tr>"
             );        
     },
         function (error) {
