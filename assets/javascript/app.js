@@ -61,6 +61,8 @@ $("document").ready(function () {
                 "<tr> <td>" + trainsData.trainName + "</td>" +
                 //Print destination name here
                 "<td>" + trainsData.destination + "</td>" +
+                //Print First Train Time here
+                "<td class='text-center'>" + trainsData.firstTrainTime + "</td>" +
                 //Print train frequency here
                 "<td class='text-center'>" + trainsData.frequency + "</td>" +
                 //Print next arrival time here
